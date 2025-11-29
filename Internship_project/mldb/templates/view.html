@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pageName }}</title>
+    <link rel="stylesheet" href="{% static 'site.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{{ pageName }}</h1>
+    </header>
+    <div>{% include "nav.html" %}</div>
+    <main>
+        <p>This database could be improved through the addition of 2 other tables creating 2 foreign keys. One table for the data_folder and one for date_and_time. Based on the current state of the database, these could also be kept together in their own table as all tuples that share the same date_and_time also share the same data_folder. This will not be changed for the sake of simplicity in the implementation of the database and queries.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Data Split</th>
+                    <th>Data Type</th>
+                    <th>Image Name</th>
+                    <th>Data Folder Location</th>
+                    <th>Upload Date and Time</th>
+                    <th>Removed from Database</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pipes in pipe_image_data %}
+                <tr>
+                    <!-- Displaying data -->
+                    <td>{{ pipes.id }}</td>
+                    <td>{{ pipes.data_split }}</td>
+                    <td>{{ pipes.data_type }}</td>
+                    <td>{{ pipes.file_name }}</td>
+                    <td>{{ pipes.data_folder }}</td>
+                    <td>{{ pipes.date_time }}</td>
+                    <td>{{ pipes.removed }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+    {% include "footer.html" %}
+</body>
+</html>

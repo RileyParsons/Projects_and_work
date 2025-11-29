@@ -1,0 +1,204 @@
+body
+{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color:rgb(184,56,59);
+    /*background-color:cadetblue;*/  
+    background-image: url('/static/web_background.gif');    
+    background-attachment: fixed;
+    animation: slide 30s linear infinite;
+    text-align: center;
+}
+@keyframes slide{
+    from {background-position: 0 0;}
+    to {background-position: 100% 0;}
+}
+
+table{
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse; /* Ensure borders are collapsed */
+    width: 80%; /* Adjust width as needed */
+    margin: 20px auto; /* Center align the table */
+    border: 1px solid black;
+    border-radius: 10px; 
+}
+
+form[id="delete"]
+{
+    background-color: rgba(255, 255, 255, 0.0);
+    border:1px solid rgba(255, 255, 255, 0.0);
+    border-radius: 0px;
+}
+
+form
+{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-bottom: 20px;
+    border:1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+
+}
+
+#zip_form
+{
+    border: 1px solid black;
+    border-radius: 10px;
+
+
+}
+
+thead
+{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+th,td
+{
+    border: 2px solid black;
+    text-align: center;
+    width: 25%;
+    font-size: 20px;
+    margin-left: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+nav
+{
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align:center;
+    font-size: 20px;
+    float: left;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100px;
+    position:fixed;
+    z-index: 1;
+    left: 0;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+nav p:hover{
+    background-color:rgb(88 ,133 ,162);
+    border: 3px solid black;
+}
+
+a:hover{
+    background-color:rgb(88 ,133 ,162);
+}
+
+a[id="footer"]:hover
+{
+    background-color:  rgba(255, 255, 255, 0.0);
+    border: 1px dotted black;
+}
+
+input[type="submit"] 
+{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+input[type="submit"]:hover 
+{
+    background-color:rgb(88 ,133 ,162);
+    border: 3px solid black;
+}
+
+input
+{
+    padding: 2px;
+}
+
+button[type="submit"] 
+{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+button[type="submit"]:hover 
+{
+    background-color:rgb(88 ,133 ,162);
+    border: 3px solid black;
+}
+footer
+{
+    background-color: rgba(255, 255, 255, 0.7);
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 10px;
+    font-size: smaller;
+}
+
+header
+{
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+}
+
+h1
+{
+    font-size: 40px;
+    top: 0; 
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+h2
+{
+    font-size: 30px;
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+p
+{
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid rgb(88 ,133 ,162); /* Blue */
+    border-bottom:16px solid rgb(88 ,133 ,162);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  
+    position: fixed;
+    top:50%;
+    left: 50%;
+}
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/* Responsive Adjustments for smaller screen aparently */
+
+@media (max-width: 768px)
+{
+    table
+    {
+        width: 100%;
+    }
+}

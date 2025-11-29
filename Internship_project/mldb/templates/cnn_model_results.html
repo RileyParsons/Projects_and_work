@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pageName }}</title>
+    <link rel="stylesheet" href="{% static 'site.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{{ pageName }}</h1>
+    </header>
+
+    <div>{% include "nav.html" %}</div>
+
+    <main>
+        <section>
+            <h2>Data Folder Used</h2>
+            <p>{{ data_folder }}</p>
+        </section>
+
+        <section>
+            <h2>New Model Path</h2>
+            <p>{{ model }}</p>
+        </section>
+
+        <section>
+            <h2>Evaluation Results</h2>
+            <p>Training data evaluation: [Loss, Accuracy] = {{ eval.train_eval }}</p>
+            <p>Test data evaluation: [Loss, Accuracy] = {{ eval.test_eval }}</p>
+            <p>Validation data evaluation: [Loss, Accuracy] = {{ eval.validation_eval }}</p>
+        </section>
+
+        <section>
+            <h2>Accuracy Visual</h2>
+            <p>
+                <img src="data:image/png;base64,{{ acc }}">
+            </p>
+        </section>
+
+        <section>
+            <h2>Loss Visual</h2>
+            <p>
+                <img src="data:image/png;base64,{{ loss }}">
+            </p>
+        </section>
+
+        <section>
+            <h2>Confusion Matrix</h2>
+            <p>
+                <img src="data:image/png;base64,{{ con }}">
+            </p>
+        </section>
+    </main>
+    {% include "footer.html" %}
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'site.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pageName }}</title>
+</head>
+<body>
+    <header>
+        <h1>{{ pageName }}</h1>
+    </header>
+    
+    <div>{% include "nav.html" %}</div>
+
+    <main>
+        <form action="{% url 'upload_zip_function' %}" id="zip_form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="file_name">Upload a ZIP File:</label>
+            <input type="file" id="file_name" name="file_name" accept=".zip">
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    {% include "footer.html" %}
+</body>
+</html>

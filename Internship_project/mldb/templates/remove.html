@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'site.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pageName }}</title>
+</head>
+<body>
+    <header>
+        <h1>{{ pageName }}</h1>
+    </header>
+    
+    <div>{% include "nav.html" %}</div>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Delete</th>
+                    <th>Index</th>
+                    <th>Data Split</th>
+                    <th>Data Type</th>
+                    <th>Image Name</th>
+                    <th>Data Folder Location</th>
+                    <th>Upload Date and Time</th>
+                    <th>Removed from Database</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pipes in pipe_image_data %}
+                <tr>
+                    <!-- Form for delete button -->
+                    <td>
+                        <form action="{% url 'remove_function' pipes.id %}" id="delete" method="post">
+                            {% csrf_token %}
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                    <!-- Displaying data -->
+                    <td>{{ pipes.id }}</td>
+                    <td>{{ pipes.data_split }}</td>
+                    <td>{{ pipes.data_type }}</td>
+                    <td>{{ pipes.file_name }}</td>
+                    <td>{{ pipes.data_folder }}</td>
+                    <td>{{ pipes.date_time }}</td>
+                    <td>{{ pipes.removed }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+    {% include "footer.html" %}
+</body>
+</html>

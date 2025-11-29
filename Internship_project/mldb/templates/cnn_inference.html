@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'site.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pageName }}</title>
+
+</head>
+<body>
+    <header>
+        <h1>{{ pageName }}</h1>
+    </header>
+    
+    <div>{% include "nav.html" %}</div>
+
+    <main>
+        <h2>Using: {{ loaded }}</h2>
+
+        <form action="{% url 'make_inference' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="hidden" name="loaded" value="{{ loaded }}">
+            <p>
+                Inference Image Upload:
+                <input type="file" id="img" name="img" accept="image/png, image/jpeg">
+            </p>
+            <p>
+                <img id="preview" src="" style="max-width: 100%; height: auto;">
+            </p>
+            <p>
+                <input type="submit" value="Get Inference">
+            </p>
+        </form>
+
+        {% if result %}
+        <h2>Inference Result: {{ result }} </h2>
+        {% endif %}
+    </main>
+    {% include "footer.html" %}
+    <script src ="{% static 'script.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'site.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pageName }}</title>
+    <!--
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+        
+            function loadContent(url, elementId){
+                fetch(url).then(response =>{
+                    if (!response.ok){
+                        throw new Error('HTTP error ${response.status}');
+                    }
+                    return response.text();
+                })
+            .then(data =>{
+                document.getElementById(elementId).innerHTML = data;
+            }).catch(error=>{
+                console.error('Error loading content: ', error);
+            });
+        }
+        loadContent("{% static 'nav.html' %}", "nav");
+        loadContent("{% static 'footer.html' %}", "footer");
+        });
+        </script>
+        -->
+</head>
+<body>
+    <header>
+        <h1>{{ pageName }}</h1>
+    </header>
+    
+    <div>{% include "nav.html" %}</div>
+
+    <main>
+        <p>Do not use. This is now a useless artifact and exists only for testing and development purposes. Usage will negatively impact the performance of the training model if used.</p>
+
+        <form action="{% url 'upload_new' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>
+                Data Split
+                <input type="radio" id="data_split_normal" name="data_split" value="normal">
+                <label for="data_split_normal">Normal</label>
+                <input type="radio" id="data_split_error" name="data_split" value="error">
+                <label for="data_split_error">Error</label>
+            </p>
+            <p>
+                Data Type
+                <input type="radio" id="data_type_train" name="data_type" value="train">
+                <label for="data_type_train">Train</label>
+                <input type="radio" id="data_type_test" name="data_type" value="test">
+                <label for="data_type_test">Test</label>
+            </p>
+            <p>
+                File
+                <input type="file" id="file_name" name="file_name" accept="image/png, image/jpeg">
+            </p>
+            <p>
+                Data Folder
+                <input type="text" id="data_folder" name="data_folder">
+            </p>
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        </form>
+    </main>
+    {% include "footer.html" %}
+</body>
+</html>

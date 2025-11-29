@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pageName }}</title>
+    <link rel="stylesheet" href="{% static 'site.css' %}">
+
+</head>
+<body>
+    <header>
+        <h1>{{ pageName }}</h1>
+    </header>
+    
+    <div>{% include "nav.html" %}</div>
+
+    <main>
+        <form action="{% url 'cnn_model_function' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h2>Select Dataset Path</h2>
+            <table>
+                <tr>
+                    <td> 
+                        {% for pipes in pipe_image_data %}
+                            <label>
+                                <input type="radio" name="data_folder" value="{{ pipes.data_folder }}">
+                                {{ pipes.data_folder }}
+                            </label><br>
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="train_now" value="Submit dataset for CNN and train"></td>
+                </tr>
+            </table>
+        {% include "loader.html" %}
+        </form>
+    </main>
+    {% include "footer.html" %}
+
+    <script src ="{% static 'loader.js' %}"></script>
+<!--    <script>
+
+        document.getElementById('loader').style.display = "none";
+        const loading = document.querySelector("input[id='train_now']");
+
+        loading.addEventListener('click', (event)=>{
+        document.getElementById('loader').style.display = "block";
+        });
+    </script>
+-->
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'site.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pageName }}</title>
+    
+</head>
+<body>
+    <header>
+        <h1>{{ pageName }}</h1>
+    </header>
+
+    <div>{% include "nav.html" %}</div>
+
+    <main>
+        <form action="{% url 'cnn_inference' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <section>
+                <h2>Select Model For Inference</h2>
+                <table>
+                    <tr>
+                        <td>
+                            {% for m in models %}
+                                <label>
+                                    <input type="radio" name="models" value="{{ m }}">
+                                    {{ m }}
+                                </label><br>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Use Selected Model"></td>
+                    </tr>
+                </table>
+            </section>
+        </form>
+    </main>
+    {% include "footer.html" %}
+</body>
+</html>
