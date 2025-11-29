@@ -13,7 +13,7 @@ This is a Django webpage with a machine learning model and database where users 
 This program was made as part of my university study. In this task I needed to create a way to create a custom weighting for a theoretical stock market model. The idea behind this was to get data about company X based on social media discussions and have specific key works add positive weighting (positive talk about the company) based on the number of times they occur within a post and negative words which will detract from this weighting (negative discussion of the company). The only problem with this idea is that a lot of websites do not want you to scrape them and can blacklist you. I did not want to do this, so I made use of the Romeo and Juliete script to be my stand in for a social media discussion. So, words that are related to love and positive and words that relate to death are negative words for the sake of this task.
 
 ## Collection Manager
-FInal android development assignment. 
+FInal android development assignment. This is a custom made App which is for managing a persons militaria collection.
 ### TO BE UPLOADED
 
 
