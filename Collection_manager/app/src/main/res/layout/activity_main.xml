@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        app:title="Collection Manager"
+        app:titleTextColor="@color/white"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--RecyclerView -->
+    <!--tools: listitem is required for the created display-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvItemsList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/AddNewItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_main"
+        tools:listitem="@layout/item_row" />
+
+    <Button
+        android:id="@+id/AddNewItem"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:backgroundTint="#c3b091 "
+        android:text="@string/add_button"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

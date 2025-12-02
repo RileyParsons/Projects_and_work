@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ViewItem">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:background="@color/toolbar_color"
+        app:titleTextColor="@color/white"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Collection Manager"
+/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/form_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:padding="10dp" />
+
+
+            <TextView
+                android:id="@+id/name_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/item_name" />
+
+            <EditText
+                android:id="@+id/item_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:autofillHints=""
+                android:hint="@string/item_name"
+                android:inputType="text"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/image_upload_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_image" />
+
+            <ImageView
+                android:id="@+id/uploadImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/optional_user_uploaded_image"
+                android:scaleType="centerCrop"
+                app:srcCompat="@android:drawable/ic_menu_report_image" />
+
+            <TextView
+                android:id="@+id/category_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/category" />
+
+            <Spinner
+                android:prompt="@string/cat_help"
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/era_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/era" />
+
+            <Spinner
+                android:prompt="@string/era_help"
+                android:id="@+id/era"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/year_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Year_heading" />
+
+            <EditText
+                android:id="@+id/year_purchased"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:autofillHints=""
+                android:hint="@string/year_of_purchase"
+                android:inputType="number"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/price_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/purchase_price" />
+
+            <EditText
+                android:id="@+id/price_purchased"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:autofillHints=""
+                android:hint="@string/purchase_price"
+                android:inputType="numberDecimal"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/prov_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/provenance_description" />
+
+            <EditText
+                android:id="@+id/provenance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:minHeight="100dp"
+                android:hint="@string/provenance_description"
+                android:inputType="textMultiLine"
+                android:gravity="top"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/desc_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description" />
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:minHeight="100dp"
+                android:hint="@string/description"
+                android:inputType="textMultiLine"
+                android:gravity="top"
+                android:padding="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/back"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/button_back"
+            android:text="@string/back_button"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/save"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/button_save"
+            android:text="@string/save_button"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+</LinearLayout>

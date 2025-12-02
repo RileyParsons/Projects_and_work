@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">collection Manager</string>
+    <string name="re_item_era">%s$</string>
+    <string name="re_item_name">%s$</string>
+    <string name="add_button">Add New Item</string>
+    <string name="back_button">Return</string>
+    <string name="edit_button">Edit</string>
+    <string name="save_button">Save</string>
+
+    <string name="item_name">Item Name</string>
+    <string name="category">Category</string>
+    <string name="era">era</string>
+    <string name="year_of_purchase">Year of Purchase</string>
+    <string name="purchase_price">Purchase Price</string>
+    <string name="provenance_description">Provenance Description</string>
+    <string name="description">Description</string>
+
+    <string name="item_details">
+    Name: %1$s\n\n
+    Category: %2$s\n\n
+    Era: %3$s\n\n
+    Year of Purchase: %4$d\n\n
+    Purchase Price: %5$d\n\n
+    Provenance: %6$s\n\n
+    Description: %7$s
+    </string>
+
+    <string name="spinner_era">Era:</string>
+    <string-array name="era_list">
+        <item>WW1</item>
+        <item>Interwar</item>
+        <item>WW2</item>
+        <item>WW1-WW2</item>
+
+    </string-array>
+
+    <string name="spinner_category">Category:</string>
+    <string name="delete_button">Delete Item</string>
+    <string name="toggle_mode">Dark Mode/ Light Mode</string>
+
+    <string name="sort_name_a_z">Sort by name (A-Z)</string>
+    <string name="sort_name_z_a">Sort by name (Z-A)</string>
+
+    <string name="sort_era_ww1">Sort by era (WW1-WW2)</string>
+    <string name="sort_era_ww2">Sort by era (WW2-WW1)</string>
+    <string name="colon">:&#160;</string>
+    <string name="optional_user_uploaded_image">Optional user uploaded image</string>
+
+    <string name="era_help">Select the era of the item."</string>
+    <string name="cat_help">Select an item category.</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="Year_heading">Year Purchased</string>
+
+    <string-array name="category_list">
+        <item>Headgear</item>
+        <item>Kit and equipment</item>
+        <item>Other</item>
+        <item>Uniform</item>
+        <item>Weapon</item>
+    </string-array>
+
+
+
+</resources>

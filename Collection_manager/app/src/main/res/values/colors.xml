@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="toolbar_color">#c3b091</color>
+    <color name="button_back">#F45F36</color>
+    <color name="button_save">#8BC34A</color>
+
+
+    <color name="toolbar_color_dark">#8b7a62</color>
+    <color name="background_dark">#121212</color>
+    <color name="text_dark">#EEEEEE</color>
+</resources>

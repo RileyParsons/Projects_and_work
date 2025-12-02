@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/app_bar_switch"
+        android:title="@string/toggle_mode"
+        app:actionLayout="@layout/switch_item"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/sort_name_a_z"
+        android:title="@string/sort_name_a_z" />
+    <item
+        android:id="@+id/sort_name_z_a"
+        android:title="@string/sort_name_z_a" />
+    <item
+        android:id="@+id/ww1_sort"
+        android:title="@string/sort_era_ww1" />
+    <item
+        android:id="@+id/ww2_sort"
+        android:title="@string/sort_era_ww2" />
+</menu>
