@@ -1,7 +1,7 @@
 # About The Programs
 
 ## Capstone Project - Proof of Concept System
-Video input to selection of SVG output with user interface buit for a not-for-profit client. This program was built primarily with OpenCV. I was responsible for creating the softwares design and workflow, developing demo modules and later implementation. Team leader university project with group of 4 other students.
+Video input to selection of SVG output with user interface buit for a not-for-profit client. This program was built primarily with OpenCV. Personal responsibilities; creating the software design and workflow, developing demo modules and later implementation, team leader, primary contact with stakeholder. University project with group of 4 other students.
 
 - OpenCV
 - Python
@@ -25,7 +25,7 @@ Still in development. Exploring available hyperparameters for tuning. Investigat
 
 
 ## Internship Project
-Webpage with SQL database and Machine Learning (ML) model. Users can upload a dataset in a zip file to train an ML model. Model can then be loaded in to perform categorisation tasks. In this project it was to identify faulty pipes.
+Webpage with SQL database and Machine Learning (ML) model. Users can upload a dataset in a zip file to train a ML model. Model can then be loaded in to perform categorisation tasks. In this project it was to identify faulty pipes.
 
 - Python
 - Django
@@ -39,11 +39,11 @@ Webpage with SQL database and Machine Learning (ML) model. Users can upload a da
 - Numpy
 
 ### Status
-Completed project before set deadline during internship period. Looking at the project now I think I could improve this now with a better training pipeline and data augmentation.
+Completed project before set deadline during internship period. In retrospect this could be improved with a better training pipeline and data augmentation.
 
 
 ## Web Scraping Demo
-University project to demonstrait usage of web scraping for creating custom data weighting multipliers for predictive models based on key words. The script for Romeo and Juliet was used for this.
+University project to demonstrate usage of web scraping for creating custom data weighting multipliers for predictive models based on key words. The script for Romeo and Juliet was used for this.
 
 - Python
 - Beautiful Soup
@@ -60,5 +60,5 @@ University mobile app development project. Working prototype app for keeping tra
 - SQLite
 
 ### Status
-Completed project and installed on my own device. Might do some more work in the future for extra categories, more sorting options, better user interface and improved data population speed when changing activities.
+Completed project and installed on my own device. Future enhancements: extra categories, more sorting options, better user interface and improved data population speed when changing activities.
 
